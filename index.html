@@ -4,11 +4,128 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Casting Application</title>
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js" defer></script>
 </head>
 <body>
+
+    <div class="surroundings">
+        <div class="main-container">
+        
+            <div class="info">
+                <h1>Casting Application Form</h1>
+                <p>Please fill out the form below so the agency can review your information and set up your account!</p>
+            </div>
+            <div class="form">
+                <form action="">
+                    <fieldset id="basic-fieldset">
+                        <legend>Basic Information</legend>
+                        <ul class="basic-information">
+                            <li><label for="name">Name</label><input type="text" required></li>
+                            <li><label for="surname">Surname</label><input type="text" required></li>
+                            <li><label for="birth">Date of birth</label><input type="date" required></li>
+                            <li><p>Gender at birth</p>
+                                <label for="male">Male</label>
+                                    <input type="radio" id="male" value="male" name="gender" required>
+                                <label for="female">Female</label>
+                                    <input type="radio" id="female" value="male" name="gender">
+                            </li>
+                            <ul>
+                                <li>
+                                    <label for="birth-identify">I identify myself as</label>
+                                        <select name="identity-gender" id="identity-gender-scrolldown">
+                                            <option>-- Please Select --</option>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                            <option value="non-binary">Non-Binary</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                </li>
+                            </ul>
+                            <li><label for="height">Height (cm): </label><input type="number"></li>
+                            <li><label for="weight">Weight (kg): </label><input type="number"></ll>
+                        </ul>
+                    </fieldset>
+                    <fieldset id="personal-fieldset">
+                        <legend>Personal Information</legend>
+                        <ul class="personal-information">
+                            <li><label for="email">Email</label><input id="email" type="email" required></li>
+                            <li><label for="phone">Phone</label><input id="phone" type="text" pattern="^\+?\d{0,2}\d{10}$" required></li>
+                            <li><p>Preferred method of contact:</p>
+                                <label for="sms">SMS:</label>
+                                <input id="sms" type="radio" name="contact-method">
+                                <label for="phone">Phone:</label>
+                                <input id="phone" type="radio" name="contact-method">
+                                <label for="email">Email:</label>
+                                <input id="email" type="radio" name="contact-method">
+                                <label for="telegram">Telegram:</label>
+                                <input id="telegram" type="radio" name="contact-method">
+                                <label for="whatsapp">Whatsapp:</label>
+                                <input id="whatsapp" type="radio" name="contact-method">
+                            </li>
+                            <li><label for="diet">Diet</label>
+                                <select name="diet" id="diet">
+                                    <option>-- Please Select --</option>
+                                    <option value="vegan">Vegan</option>
+                                    <option value="vegetarian">Vegetarian</option>
+                                    <option value="pescetarian">Pescetarian</option>
+                                    <option value="mediterranean">Mediterranean</option>
+                                    <option value="keto">Keto</option>
+                                    <option value="omnivore">Omnivore</option>
+                                </select>
+                            <li><label for="schedule">I'd rather work in:</label>
+                                <label for="morning">Morning:</label><input id="morning" type="radio" name="schedule" value="morning">
+                                <label for="afternoon">Afternoon:</label><input id="afternoon" type="radio" name="schedule" value="afternoon">
+                                <label for="night">Night:</label><input id="night" type="radio" name="schedule" value="night">
+                                <label for="any">Any schedule is fine:</label><input id="any" type="radio" name="schedule" value="any">
+                            </li>
+                            <li>
+                                <label for="music">Preferred music:</label>
+                                <select name="" id="music">
+                                    <option name="music">-- Please Select --</option>
+                                    <option value="techno" name="music">Techno</option>
+                                    <option value="house" name="music">House</option>
+                                    <option value="rock" name="music">Rock</option>
+                                    <option value="rock-harder" name="music">Rock (hard, grunge, punk, etc)</option>
+                                    <option value="metal-heavy" name="music">Metal (Heavy...)</option>
+                                    <option value="metal-extreme" name="music">Metal (Extreme...)</option>
+                                    <option value="jazz" name="music">Jazz</option>
+                                    <option value="classical" name="music">Classical</option>
+                                    <option value="pop" name="music">Pop</option>
+                                    <option value="blues" name="music">Blues</option>
+                                    <option value="latin" name="music">Latin</option>
+                                    <option value="any" name="music">Any music is fine</option>
+                                </select>
+                            </li>
+                            <li>
+                                <p>Are you comfortable around animals?</p>
+                                <label for="yes">Yes</label><input type="radio" name="animals" value="yes">
+                                <label for="no">No</label><input type="radio" name="animals" value="no">
+                            </li>
+                            <li>
+                                <label for="allergies" id="allergies-label">If you have allergies, please explain:</label>
+                                <textarea id="allergies"></textarea>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset id="account-fieldset">
+                        <legend>Account</legend>
+                        <ul class="account">
+                            <li><label for="username">Create a username</label><input type="text" required></li>
+                            <li><label for="password">Create a new password</label><input id="password" type="password" required></li>
+                            <li><label for="password-again">Enter your password again</label><input id="newPassword" type="password" required></li>
+                        </ul>
+                    </fieldset>
+                    <button type="submit" id="submit">Submit</button>
+                </form>
+            </div>
+        
+        </div>
+    </div>
+    <img class="background" src="./background.jpg" alt="Tokyo street background">
+
+
     
 </body>
 </html>
